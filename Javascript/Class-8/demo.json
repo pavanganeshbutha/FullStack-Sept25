@@ -1,0 +1,24 @@
+{
+    "products": [
+        {
+            "title": "Macbook Air",
+            "price": 10000,
+            "quantity": 10
+        },
+         {
+            "title": "Macbook Air",
+            "price": 10000,
+            "quantity": 10
+        },
+         {
+            "title": "Macbook Air",
+            "price": 10000,
+            "quantity": 10
+        },
+         {
+            "title": "Macbook Air",
+            "price": 10000,
+            "quantity": 10
+        }
+    ]
+}
