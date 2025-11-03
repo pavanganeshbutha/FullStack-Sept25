@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Simple Kanban Board</h1>
+        <button class="btn btn-primary" id="open-add-task-modal-btn">Add Task</button>
+    </header>
+
+    <main>
+        <section class="tool-box">
+            <div data-priority="pink" class="priority" style="background-color: pink;"></div>
+            <div data-priority="green" class="priority" style="background-color: green;"></div>
+            <div data-priority="blue" class="priority" style="background-color: blue;"></div>
+            <div data-priority="black" class="priority" style="background-color: black;"></div>
+            <div data-priority="all" class="priority selected-priority" style="background-color: lightblue;">All</div>
+        </section>
+
+        <section class="task-board">
+            <article class="tasks">
+                <h2>Todo</h2>
+                <div id="todo-tasks"></div>
+            </article>
+            <article class="tasks">
+                <h2>InProgress</h2>
+                <div id="inprogress-tasks"></div>
+            </article>
+            <article class="tasks">
+                <h2>Done</h2>
+                <div id="done-tasks"></div>
+            </article>
+        </section>
+
+        <section id="add-task-modal">
+            <section class="task-modal-content">
+                <h3>Add New Task</h3>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label" for="task-description">Task Description:</label>
+                        <textarea class="form-control" id="task-description"></textarea>
+                    </div>
+                    <h4>Priority Colors</h4>
+                    <div>
+                        <label for="pink">Pink</label>
+                        <input type="radio" id="pink" name="priority" value="pink" checked>
+                        <label for="green">Green</label>
+                        <input type="radio" id="green" name="priority" value="green">
+                        <label for="blue">Blue</label>
+                        <input type="radio" id="blue" name="priority" value="blue">
+                        <label for="black">Black</label>
+                        <input type="radio" id="black" name="priority" value="black">
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn btn-primary" type="submit" id="create-task-btn">Create Task</button>
+                        <button class="btn btn-secondary" id="close-modal-btn" type="button">Cancel</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
