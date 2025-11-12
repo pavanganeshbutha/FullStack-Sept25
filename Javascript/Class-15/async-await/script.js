@@ -38,18 +38,24 @@ function addV2(x, y) {
 
 async function print() { // this function also return something implicitly i.e undefined
     console.log('Hello world');
-} 
+}
 
 async function main() {
-    console.log('Starting to execute the function');
+    try {
+        console.log('Starting to execute the function');
+        const promise = add(3, 4);
+        const val = await promise;
 
-    const promise = add(4, 5);
+        console.log("value of the promise", val);
 
-    const val =  await promise;
-    
-    console.log("value of the promise", val);
-    
-    console.log('Function executed successfully');
+        console.log('Function executed successfully');
+    }
+    catch (err) {
+        console.log(err);
+    }
+    finally {
+        console.log('Inside finally');
+    }
 }
 
 console.log('START');
