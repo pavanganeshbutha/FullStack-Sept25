@@ -9,7 +9,8 @@ const divs = document.querySelectorAll('section div');
 function updateRatingUI(selectedRating) {
     for (let star of divs) {
         const currentStarRating = parseInt(star.getAttribute('data-rating'));
-        currentStarRating <= selectedRating ? star.classList.add('filled') : star.classList.remove('filled');
+        currentStarRating <= selectedRating ? star.classList.add('filled') : s
+        
     }
 }
 
