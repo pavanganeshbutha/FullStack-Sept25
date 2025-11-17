@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .filled{
+            color: rgb(255, 226, 8);
+        }
+
+        section{
+            display: flex;
+            font-size: 2rem;
+        }
+        section div{
+            transition: 100ms;
+        }
+        section div:hover{
+            cursor: pointer;
+            transform: scale(1.4);
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <h1>Machine Coding: Star Rating Problem</h1>
+
+
+    <section>
+        <div data-rating="1">&starf;</div>
+        <div data-rating="2">&starf;</div>
+        <div data-rating="3">&starf;</div>
+        <div data-rating="4">&starf;</div>
+        <div data-rating="5">&starf;</div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
