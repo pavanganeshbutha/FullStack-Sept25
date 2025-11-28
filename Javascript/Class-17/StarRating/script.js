@@ -9,8 +9,8 @@ const divs = document.querySelectorAll('section div');
 function updateRatingUI(selectedRating) {
     for (let star of divs) {
         const currentStarRating = parseInt(star.getAttribute('data-rating'));
-        currentStarRating <= selectedRating ? star.classList.add('filled') : s
-        
+        currentStarRating <= selectedRating ? star.classList.add('filled') : star.classList.remove('filled');
+
     }
 }
 
@@ -23,4 +23,16 @@ section.addEventListener('click', function (event) {
     const ratingVal = parseInt(event.target.getAttribute('data-rating'));
     console.log(ratingVal);
     updateRatingUI(ratingVal);
-})
+});
+
+for (let star of divs) {
+    star.addEventListener('mouseenter', function (event) {
+        const ratingVal = parseInt(event.target.getAttribute('data-rating'));
+        updateRatingUI(ratingVal);
+    });
+    star.addEventListener('mouseleave', function (event) {
+        for (let div of divs) {
+            div.classList.remove('filled');
+        }
+    });
+}
