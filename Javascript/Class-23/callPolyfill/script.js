@@ -13,10 +13,10 @@ function fun(x, y) {
 
 // fun.call(obj, 10, 20);
 
-Function.prototype.myCall = function (thisArg, ...args) {
-    thisArg.fn = this;
-    const res = thisArg.fn(...args);
-    delete thisArg.fn;
+Function.prototype.myCall = function (customObj, ...args) {
+    customObj.__fn__ = this;
+    const res = customObj.__fn__(...args);
+    delete customObj.__fn__;
     return res;
 }
 
