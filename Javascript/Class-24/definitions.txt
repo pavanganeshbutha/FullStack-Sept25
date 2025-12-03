@@ -1,0 +1,1 @@
+Polyfills in programming are pieces of code (usually JavaScript on the web) that provide modern functionality on older browsers that do not natively support it. Essentially, a polyfill is a fallback implementation for features that are expected in modern environments but are missing from the user's environment because they are using an outdated browser or platform.
