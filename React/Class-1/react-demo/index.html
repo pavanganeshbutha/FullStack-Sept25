@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- React Libs -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- babel cdn to parse JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="root"></div>
+    
+
+
+    <script type="text/babel">
+
+        // ------------- Below code uses plain js to create a hello world heading inside the div
+
+        // const root = document.querySelector('#root');
+
+        // const heading = document.createElement('h1');
+
+        // heading.innerText = 'Hello from Vanilla JS';
+
+        // root.append(heading);
+
+
+        // ----------Lets replicate the same this using react and react-dom
+
+        // 1. I need to select div of id root.
+
+        const domRoot = document.querySelector('#root');
+
+        // 2. create a heading using react
+
+        // const h1 = React.createElement('h1', {
+        //     className: "heading",
+        //     style: {
+        //         color: "red",
+        //         fontSize: '5rem',
+        //         border: '2px solid black'
+        //     }
+        // }, 'Hello from React');
+
+
+        const figure = React.createElement('figure', {style:{border: '2px solid #ccc'}}, 
+                React.createElement('h2', null, 'This is an h2'), 
+                React.createElement('figcaption', null, 
+                React.createElement('h3', null, 'This is an h3 inside figcaption')))
+
+
+        // Lets make a figure component using jsx.
+
+        function Figure(){
+            return <figure>
+                    <h2>This is an h2</h2>
+                    <figcaption>
+                        <h3>Price: $100</h3>    
+                        <p>This is some random description</p>
+                    </figcaption>
+                </figure>
+        }
+
+
+        // 3. render or display that created heading inside the div of id root.
+
+        const root = ReactDOM.createRoot(domRoot);
+
+        root.render(Figure());
+
+    
+    </script>
+</body>
+</html>
